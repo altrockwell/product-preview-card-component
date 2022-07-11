@@ -36,7 +36,7 @@ body {
 	--padding: 24px;
 
 	width: min(95vw, 600px);
-	height: max(90vh, 450px);
+	height: max(90vh, 470px);
 	display: flex;
 	flex-direction: column;
 	/* display: grid;
@@ -120,7 +120,7 @@ body {
 @media screen and (min-width: 630px) {
 	.card {
 		flex-direction: row;
-		height: min(90vh, 450px);
+		height: min(90vh, 470px);
 	}
 	.card-img {
 		height: 100%;
