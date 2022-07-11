@@ -12,6 +12,7 @@
 :root {
 	--background-color: hsl(30, 38%, 92%);
 	--primary-color: hsl(158, 36%, 37%);
+	--primary-color-alt: hsl(158, 36%, 27%);
 	--white: hsl(0, 0%, 100%);
 	--text-black: hsl(212, 21%, 14%);
 	--text-gray: hsl(228, 12%, 48%);
@@ -36,7 +37,7 @@ body {
 	--padding: 24px;
 
 	width: min(95vw, 600px);
-	height: max(90vh, 470px);
+	height: max(90vh, 460px);
 	display: flex;
 	flex-direction: column;
 	/* display: grid;
@@ -77,6 +78,7 @@ body {
 	font-size: var(--heading-size);
 	color: var(--text-black);
 	margin-top: 17px;
+	font-weight: 700;
 }
 .card-description {
 	margin-bottom: 50px;
@@ -96,6 +98,11 @@ body {
 	padding-block: 1.5em;
 	border-radius: 0.25em;
 	font-weight: bold;
+}
+.card-btn:hover,
+.card-btn:active {
+	cursor: pointer;
+	background-color: var(--primary-color-alt);
 }
 .cart-icon {
 	margin-right: 0.5rem;
@@ -120,7 +127,7 @@ body {
 @media screen and (min-width: 630px) {
 	.card {
 		flex-direction: row;
-		height: min(90vh, 470px);
+		height: min(90vh, 460px);
 	}
 	.card-img {
 		height: 100%;
