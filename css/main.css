@@ -12,11 +12,12 @@
 :root {
 	--background-color: hsl(30, 38%, 92%);
 	--primary-color: hsl(158, 36%, 37%);
-	/* --white: blue; */
 	--white: hsl(0, 0%, 100%);
-
 	--text-black: hsl(212, 21%, 14%);
 	--text-gray: hsl(228, 12%, 48%);
+
+	/* Font sizes */
+	--heading-size: 2rem;
 }
 
 body {
@@ -35,9 +36,12 @@ body {
 	--padding: 24px;
 
 	width: min(95vw, 600px);
-	height: max(95vh, 600px);
+	height: max(90vh, 450px);
 	display: flex;
 	flex-direction: column;
+	/* display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+	grid-template-rows: 1fr 2fr; */
 	background-color: var(--white);
 	border-radius: 10px;
 	overflow: hidden;
@@ -45,16 +49,15 @@ body {
 
 .card-img {
 	width: 100%;
-	height: 30%;
+	height: 35%;
 	background: url('../images/image-product-mobile.jpg');
 	background-size: cover;
-	background-position: center;
-	flex-grow: 1;
+	background-position: top center;
 }
 
 .card-content {
 	width: 100%;
-	flex-grow: 2;
+
 	/* display: flex;
 	flex-direction: column;
 	justify-content: space-evenly; */
@@ -71,7 +74,7 @@ body {
 }
 .card-title {
 	font-family: 'Fraunces', serif;
-	font-size: 1.9rem;
+	font-size: var(--heading-size);
 	color: var(--text-black);
 	margin-top: 17px;
 }
@@ -92,9 +95,11 @@ body {
 	color: var(--white);
 	padding-block: 1.5em;
 	border-radius: 0.25em;
+	font-weight: bold;
 }
 .cart-icon {
 	margin-right: 0.5rem;
+	width: 20px;
 }
 
 .price-container {
@@ -103,11 +108,24 @@ body {
 	margin-bottom: 21px;
 }
 .discounted-price {
-	margin-right: 1rem;
-	font-size: 1.9rem;
+	margin-right: 2rem;
+	font-size: var(--heading-size);
 	font-family: 'Fraunces', serif;
 	color: var(--primary-color);
 }
 .original-price {
 	text-decoration: line-through;
+}
+
+@media screen and (min-width: 630px) {
+	.card {
+		flex-direction: row;
+		height: min(90vh, 450px);
+	}
+	.card-img {
+		height: 100%;
+		background: url('../images/image-product-desktop.jpg');
+		background-size: cover;
+		background-position: center;
+	}
 }
